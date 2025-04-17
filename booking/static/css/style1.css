@@ -1,0 +1,274 @@
+/* ===== Baslayout ===== */
+body {
+    background: linear-gradient(#a9cfdf, #beb7a6);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.6;
+    color: #423428;
+}
+
+/* ===== Rubriker ===== */
+h1 {
+    font-size: 3em;
+    font-weight: 900;
+    text-shadow: 3px 3px 6px hsla(203, 68%, 36%, 0.888), 3px 3px 6px hsl(0, 33%, 29%);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* ===== Text & Länkar ===== */
+p {
+    font-size: 1.3em;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(64, 85, 103, 0.4);
+    margin: 10px 0;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Navigering ===== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #423428;
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #423428;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #2a221d;
+}
+
+/* ===== Hero ===== */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin-top: 15px;
+}
+
+.hero-text {
+    padding: 30px;
+    border-radius: 50px 50px 0 0;
+    background: rgba(255,255,255,0.7);
+}
+
+/* ===== Bokningswidget ===== */
+.booking-widget {
+    background: #2c4d68af;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    border: ridge 3px #423428;
+}
+
+.booking-widget label,
+.booking-widget input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 1em;
+}
+
+.booking-widget input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.booking-widget button {
+    background: #423428;
+    color: white;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.booking-widget button:hover {
+    background: #2a221d;
+}
+
+/* ===== Sektioner: Highlights & Offers ===== */
+.highlights, .special-offers {
+    background-color: #eee5de;
+    padding: 30px;
+    border: solid #eee5de;
+}
+
+.highlight-item, .offer-item {
+    font-size: 1.2em;
+    color: #405567;
+    margin-bottom: 12px;
+}
+
+/* ===== Rumskort ===== */
+.featured-rooms {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.room-item {
+    display: inline-block;
+    width: 280px;
+    height: auto;
+    background-color: #c3d6e89a;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.room-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.room-item p {
+    margin-top: 10px;
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+    padding: 20px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    background: white;
+    border: 1px solid #261e17;
+    border-radius: 50px;
+    padding: 15px;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* ===== Karta ===== */
+.map img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* ===== CTA-knappar ===== */
+.cta-buttons button {
+    background-color: #423428;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+}
+
+.cta-buttons button:hover {
+    background-color: #2a3e55;
+}
+
+/* ===== Intro & Footer ===== */
+.intro-message {
+    background: #99aab3c1;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+footer {
+    background-color: #423428;
+    color: white;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* ===== Gallery ===== */
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+}
+
+/* ===== Responsiv ===== */
+@media (max-width: 768px) {
+    .hero-text, .booking-widget, .carousel-item, .room-item {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .carousel {
+        grid-template-columns: 1fr;
+    }
+}

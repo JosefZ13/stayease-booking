@@ -1,0 +1,757 @@
+/* Hero section styling */
+.hero {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the hero section */
+    text-align: center; /* Center the text */
+}
+
+/* Hero image styling */
+.hero img {
+    width: 100%;
+    height: 400px; /* Fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the area */
+    display: block;
+    border-radius: 100px 100px 100px 100px; /* Rounded corners at the top */
+    margin-top: 15px;
+}
+
+/* Hero text container */
+.hero-text {
+    border-style: dotted;
+    border-color: #423428;
+    padding: 20px;
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Hero heading */
+.hero-text h1 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin: 0;
+    color: #333; /* Dark text color */
+}
+
+/* Hero paragraph */
+.hero-text p {
+    font-size: 1.2rem; /* Adjust size as needed */
+    margin: 10px 0 0;
+    color: #555; /* Slightly lighter text color */
+}
+
+body {
+    background: linear-gradient( #a9cfdf, #beb7a6 );
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #423428;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    border: solid;
+    border-radius: 20%;
+    
+}
+
+ul li a:hover {
+    color: #83a4c1;
+}
+
+h1 {
+    color: #423428;
+    font-family: Garamond, serif;
+    font-weight: 900;
+    font-size: 3em;
+    text-shadow: 3px 3px 6px hsla(203, 68%, 36%, 0.888),  3px 3px 6px hsl(0, 33%, 29%);
+}
+
+p {
+    color: #422929e8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em; 
+    font-style: italic;
+    text-shadow: 3px 3px 6px hsla(203, 68%, 36%, 0.888);
+
+}
+
+.booking-widget {
+    background: #2c4d68af;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto ;
+    border-style: ridge;
+    
+}
+
+.booking-widget label,
+.booking-widget input {
+    width: 90%;
+    max-width: 260px;
+}
+
+.booking-widget input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+.booking-widget button {
+    background: #423428;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 260px;
+    cursor: pointer;
+}
+
+.booking-widget button:hover {
+    background: #2a221d ;
+}
+
+.highlights {
+    margin-top: 40px;
+    text-align: center;
+    color: #2a221de8 ;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 1.5em ;
+    border: solid #eee5de;
+    background-color: #eee5de;
+    
+}
+.highlight-item {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px; /* Adds space between each item */
+    display: block;
+    color: #405567;
+   
+}
+
+h2 {
+    color: #423428;
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    margin-bottom: 20px;
+    
+}
+
+
+.special-offers {
+    
+    text-align: center;
+    padding: 10px;
+    background-color: #eee5de;
+    background-clip: content-box;
+    
+}
+
+
+.special-offers h2 {
+    font-size: 1.5em;
+    color: #423428;
+    
+}
+
+.offer-item {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #405567;
+}
+
+.featured-rooms {
+    text-align: center;
+    padding: 20px;
+}
+
+.featured-rooms h2 {
+    font-size: 1.5em;
+    color: #423428;
+}
+
+.room-item {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+    background-color: #c3d6e89a;  /* Placeholder color */
+    width: 300px;
+    height: 350px; /* Increased height to fit images and content */
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;  /* Prevents padding from expanding the box size */
+    overflow: hidden;  /* Ensures that content doesn't overflow */
+}
+
+.room-item img {
+    width: 100%;  /* Makes the image fill the width of the container */
+    height: 280px;  /* Adjust image height */
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+    border-radius: 8px;  /* Optional: Round the corners of the image */
+}
+
+.room-item p {
+    color: #1c2125;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonials h2 {
+    font-size: 1.5em;
+    color:  #423428;
+    margin-bottom: 15px;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #405567;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border:solid #261e17;
+    border-radius: 50%;
+    border-width: 1px;
+    background-color: white;
+}
+
+.map {
+    text-align: center;
+    padding: 20px;
+}
+
+.map h2 {
+    font-size: 1.5em;
+    color:#413127;
+    margin-bottom: 15px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;  /* Adjust the height as needed */
+    background-image: url("{% static 'images/map2.jpeg' %}"); /* Use your map2.jpeg as background */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    
+}
+
+.local-attractions {
+    text-align: center;
+    border-top: double #2a221d;
+    
+}
+
+.local-attractions h2 {
+    font-size: 1.5em;
+    color: #423428;
+    margin-bottom: 10px;
+}
+
+.local-attractions p {
+    font-size: 1.1em;
+    color:#413127;
+    margin-top: 0;
+}
+
+.cta-buttons {
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-buttons button {
+    background-color: #423428;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons button:hover {
+    background-color: #2a3e55;
+}
+
+.cta-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.intro-message {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: #423428;
+    border: solid #c0a37d;
+    border-radius: 50%;
+    border-width: 1px;
+    background-color: #99aab3c1 ;
+    text-align: center;
+    margin: 5%;
+}
+
+.social-media i {
+    font-size: 3em;  /* Makes only the Facebook and Twitter icons bigger */
+    color: #405567;  /* Optional: Adjust the icon color */
+    margin: 0 15px;  /* Space between the icons */
+}
+
+.social-media i:hover {
+    color: #2a221d;  /* Change color on hover */
+}
+
+.social-media a img {
+    width: 40px;  /* Keep the image size small */
+    height: 40px;  /* Keep the image size square */
+    margin: 0 15px;  /* Space between the images */
+}
+
+.social-media h2 {
+    font-family: 'Arial', sans-serif;  /* Change font to a clean sans-serif font */
+    font-size: 1.5em;  /* Increase font size for better visibility */
+    color: #405567;  /* Match the color with the theme */
+    margin-bottom: 20px;  /* Add space below the heading */
+    text-transform: uppercase;  /* Make the text uppercase for a bold look */
+    letter-spacing: 2px;  /* Add some letter spacing to make the text more distinct */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);  /* Optional: Add a subtle shadow to the text */
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    margin-top: 70px;
+    font-size: 0.5em;
+}
+
+.room-selection-form {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    background: #eee5de;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-style:double;
+    background-size:auto;
+    font-style: oblique;
+}
+
+.room-selection-form label {
+    font-weight: bold;
+    display: block;
+    margin: 15px 10 5px;
+    color: #405567;
+}
+
+#check_in_date, #check_out_date {
+    display: inline-block;
+    width: 45%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="number"], input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input:focus {
+    outline: none;
+    border-color: #405567;
+    box-shadow: 0 0 5px rgba(64, 85, 103, 0.5);
+}
+
+.room-types h2 {
+    text-align: center;
+    font-style: italic;
+    border-top: dotted;
+    font-size: 2em;
+    color: #261e17;
+    border-bottom: dotted;
+    margin-top: 50px;
+    background-color: #eee5de;
+}
+
+.room-types h3 {
+    font-size: 1.5em ;
+    font-family:'Gill Sans', 'Gill Sans MT, Trebuchet MS', sans-serif;
+    color: #261e17 ;
+    text-shadow: 3px 3px 6px  #2a3e55;
+
+}
+.room-type {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Ensure text is also centered */
+}
+
+.room-type button {
+    background: #405567; /* Elegant dark blue */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+
+.room-type button:hover {
+    background: #2c3e50; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.room-type button:active {
+    background: #1a252f; /* Even darker on click */
+    transform: scale(0.98); /* Slight press effect */
+}
+.booking-info {
+    background: #ede1d1; /* Light gray background for a soft look */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.booking-info h2 {
+    font-size: 1.8em;
+    color: #405567;
+    margin-bottom: 15px;
+}
+
+.booking-info p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+.contact-info h2 {
+    text-align: center;
+    font-size: 1em;
+    color: #405567;
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.room-type h3 {
+    
+    display: inline-flex; /* Aligns text and icon in one line */
+    align-items: center; /* Centers them vertically */
+    font-size: 1.5em;
+    color: #405567;
+}
+
+.room-type i {
+    font-size: 1.2em; /* Adjust icon size */
+    margin-right: 8px; /* Adds space between the icon and text */
+}
+
+.gallery {
+    text-align: center;
+    padding: 20px 20px;
+    
+    margin-top: 29px;
+}
+
+.gallery h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-top: dotted #2a221d;
+    font-size: 2.9em;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom:dotted #2a221d;
+    background-color:#ede1d1 ;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px; /* Adjust width */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.carousel-item {
+    background: white;
+    padding: 9px;
+    border-radius: 6%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+/* Make it single column on small screens */
+@media (max-width: 600px) {
+    .carousel {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General styling for amenities section */
+.amenities {
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: center; /* Center the content */
+    background-clip: content-box;
+}
+
+/* Title for the section */
+.amenities h2 {
+    border-top: dotted #2a221d;
+    font-size: 2.5em;
+    color: #405567;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    border-bottom: dotted #2a221d;
+    background-color: #ede1d1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Description paragraph */
+.amenities p {
+    font-size: 1.2em;
+    color: #2a221d;
+    margin-bottom: 30px;
+}
+
+/* Container for images */
+.amenities img {
+    width: 150px; /* Set a consistent size for all images */
+    height: 150px; 
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 10px; /* Adds space between images */
+    border-radius: 10px; /* Adds rounded corners */
+}
+
+/* Flexbox layout for images to appear in one row */
+.amenities img {
+    display: inline-block;
+}
+
+/* Styling for the list of amenities */
+.amenities ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Styling for each list item */
+.amenities li {
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #413127;
+    font-weight: bold;
+}
+
+/* Responsive design: Stack images on smaller screens */
+@media (max-width: 768px) {
+    .amenities img {
+        width: 100px; /* Smaller image size for mobile */
+        height: 100px;
+    }
+    .amenities ul {
+        text-align: left;
+    }
+}
+/* Styling for the attractions section */
+.attractions {
+    padding: 20px;  /* Add padding to space out content */
+    text-align: center;  /* Center the text */
+    color: #2a221d;  /* Text color */
+    background-color: white;
+    background-clip: content-box;
+}
+
+/* Styling for the attractions title */
+.attractions h2 {
+    border: dotted #2a221d;
+    font-size: 2.5em;  /* Larger font for the title */
+    color: #405567;  /* Set color for the title */
+    margin-bottom: 15px;  /* Space below the title */
+    background-color: #ede1d1;
+}
+
+/* Styling for the description paragraph */
+.attractions p {
+    font-size: 1.1em;  /* Slightly larger text for description */
+    margin-bottom: 20px;  /* Space below the paragraph */
+    background-color: white;
+}
+
+/* Styling for the list of attractions */
+.attractions ul {
+    list-style-type: none;  /* Remove the default bullet points */
+    padding: 0;  /* Remove default padding */
+    font-size: 1.2em;  /* Set font size */
+    background-color: white;
+}
+
+/* Styling for each list item in attractions */
+.attractions li {
+    margin-bottom: 10px;  /* Space between list items */
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;  /* Font styling */
+    color: #2a221d;  /* Set text color */
+}
+
+/* Styling for the footer */
+footer {
+    padding: 20px;  /* Add padding to the footer */
+    text-align: center;  /* Center the text */
+    background-color: #f4f4f4;  /* Light background color */
+    color: #333;  /* Dark text color */
+}
+
+footer p {
+    font-size: 1em;  /* Set font size for text */
+    margin: 5px 0;  /* Space between paragraphs */
+}
+
+/* Admin Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center; /* Centrera text i tabellen */
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center; /* Centrera text i tabellen */
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0066cc;
+}
+
+/* Centrera text i allmänhet */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Formulär och inmatningsfält */
+input[type="text"], input[type="email"], input[type="number"], input[type="date"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004a99;
+}

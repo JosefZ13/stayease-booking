@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Redigera Bokning – StayEase</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<h1>Redigera Bokning</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="check_in_date">Incheckningsdatum:</label>
+    <input type="date" name="check_in_date" value="{{ booking.check_in_date }}" required>
+
+    <label for="check_out_date">Utcheckningsdatum:</label>
+    <input type="date" name="check_out_date" value="{{ booking.check_out_date }}" required>
+
+    <label for="total_price">Totalt pris:</label>
+    <input type="number" step="0.01" name="total_price" value="{{ booking.total_price }}" required>
+
+    <button type="submit">Spara ändringar</button>
+</form>
+
+<a href="{% url 'admin_dashboard' %}">← Tillbaka till admin-dashboard</a>
+
+</body>
+</html>

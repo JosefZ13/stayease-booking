@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Sökresultat</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Sökresultat</h1>
+
+    {% if rooms %}
+        {% for room in rooms %}
+            <div class="search-result-item">
+                <p><strong>Rum:</strong> {{ room.room_number }} – {{ room.room_type }}</p>
+                <p><strong>Pris:</strong> {{ room.price }} kr/natt</p>
+                <a href="{% url 'booking_form' room.id %}">
+                    <button>Boka detta rum</button>
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>❌ Inga rum tillgängliga för de valda kriterierna.</p>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'home' %}">← Tillbaka till startsidan</a>
+</div>
+</body>
+</html>

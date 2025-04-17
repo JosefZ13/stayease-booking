@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>StayEase - Start</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <script src="https://kit.fontawesome.com/f60f71d537.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="logo">StayEase</div>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house" style="color: #004080;"></i> <a href="{% url 'home' %}">Home</a></li>
+            <li><i class="fa-solid fa-building-circle-check" style="color: #004080;"></i> <a href="{% url 'booking' %}">Booking</a></li>
+            <li><i class="fa-solid fa-images" style="color: #004080;"></i> <a href="{% url 'gallery' %}">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="{% static 'images/hero.png' %}" alt="Hotel Image">
+    <div class="hero-text">
+        <h1>Välkommen till StayEase</h1>
+        <p>Din komfort är vår prioritet</p>
+    </div>
+</section>
+
+<section class="booking-widget">
+    <form method="get" action="{% url 'room_search' %}">
+        <label for="check_in">Incheckning:</label>
+        <input type="date" id="check_in" name="check_in" required>
+
+        <label for="check_out">Utcheckning:</label>
+        <input type="date" id="check_out" name="check_out" required>
+
+        <label for="guests">Antal gäster:</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+
+        <button type="submit">Sök rum</button>
+    </form>
+</section>
+
+<section class="highlights">
+    <h2>Våra Tjänster</h2>
+    <div class="highlight-item">Gratis Wi-Fi</div>
+    <div class="highlight-item">Swimmingpool</div>
+    <div class="highlight-item">Spa & Wellness</div>
+    <div class="highlight-item">Finrestaurang</div>
+</section>
+
+<section class="special-offers">
+    <h2>Erbjudanden</h2>
+    <div class="offer-item">Sommarrabatt – 20% Off</div>
+    <div class="offer-item">Weekendpaket</div>
+</section>
+
+<section class="featured-rooms" id="rooms">
+    <h2>Utvalda Rum</h2>
+    <div class="room-item">
+        <img src="{% static 'images/room1.jpeg' %}" alt="Deluxe Room">
+        <p>Deluxe Room</p>
+    </div>
+    <div class="room-item">
+        <img src="{% static 'images/room2.jpeg' %}" alt="Executive Suite">
+        <p>Executive Suite</p>
+    </div>
+</section>
+
+<section class="testimonials">
+    <h2>Vad Våra Gäster Säger</h2>
+    <blockquote>"Fantastisk vistelse! Rekommenderas starkt!" – John Doe</blockquote>
+    <blockquote>"Utmärkt service och komfort." – Jane Smith</blockquote>
+</section>
+
+<section class="map">
+    <h2>Hitta hit</h2>
+    <div id="map">
+        <img src="{% static 'images/map2.jpeg' %}" alt="Karta">
+    </div>
+</section>
+
+<section class="local-attractions">
+    <h2>Utforska Området</h2>
+    <p>Upptäck närliggande attraktioner, restauranger och kulturupplevelser.</p>
+</section>
+
+<section class="cta-buttons">
+    <button onclick="location.href='{% url 'room_search' %}'">Sök & Filtrera Rum</button>
+    <button onclick="location.href='{% url 'admin_dashboard' %}'">Adminpanel</button>
+</section>
+
+<section class="intro-message">
+    <h2>Om Oss</h2>
+    <p>StayEase erbjuder högklassig gästfrihet. Vårt mål är att göra din vistelse oförglömlig.</p>
+</section>
+
+<section class="social-media">
+    <h2>Följ oss</h2>
+    <a href="https://www.facebook.com" target="_blank">
+        <i class="fa-brands fa-facebook-square"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank">
+        <i class="fa-brands fa-twitter-square"></i>
+    </a>
+</section>
+
+<footer>
+    <p>Kontakta oss: info@stayease.com | +123 456 7890</p>
+    <p>&copy; 2025 StayEase. Alla rättigheter förbehållna.</p>
+</footer>
+</body>
+</html>

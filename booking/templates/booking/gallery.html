@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Galleri</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">StayEase</div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'booking' %}">Booking</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Våra Rum</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <a href="{% static 'images/gallery1.png' %}" target="_blank">
+                    <img src="{% static 'images/gallery1.png' %}" alt="Deluxe Room">
+                </a>
+                <p>Rum 101 – Deluxe Room</p>
+            </div>
+            <div class="carousel-item">
+                <a href="{% static 'images/gallery2.png' %}" target="_blank">
+                    <img src="{% static 'images/gallery2.png' %}" alt="Executive Suite">
+                </a>
+                <p>Rum 102 – Executive Suite</p>
+            </div>
+            <div class="carousel-item">
+                <a href="{% static 'images/gallery3.png' %}" target="_blank">
+                    <img src="{% static 'images/gallery3.png' %}" alt="Standard Room">
+                </a>
+                <p>Rum 103 – Standard Room</p>
+            </div>
+            <div class="carousel-item">
+                <a href="{% static 'images/gallery4.jpg' %}" target="_blank">
+                    <img src="{% static 'images/gallery4.jpg' %}" alt="Family Suite">
+                </a>
+                <p>Rum 104 – Family Suite</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities">
+        <h2>Hotellets Bekvämligheter</h2>
+        <p>På StayEase erbjuder vi en rad faciliteter för att göra din vistelse bekväm och minnesvärd:</p>
+        <div class="amenity-images">
+            <a href="{% static 'images/3p.jpg' %}" target="_blank">
+                <img src="{% static 'images/3p.jpg' %}" alt="Spa">
+            </a>
+            <a href="{% static 'images/2p.png' %}" target="_blank">
+                <img src="{% static 'images/2p.png' %}" alt="Gym">
+            </a>
+            <a href="{% static 'images/p4.jpg' %}" target="_blank">
+                <img src="{% static 'images/p4.jpg' %}" alt="Pool">
+            </a>
+            <a href="{% static 'images/1p.png' %}" target="_blank">
+                <img src="{% static 'images/1p.png' %}" alt="Restaurang">
+            </a>
+        </div>
+
+        <ul>
+            <li>Gratis Wi-Fi</li>
+            <li>Swimmingpool</li>
+            <li>Spa & Wellness Center</li>
+            <li>Finrestaurang</li>
+            <li>Träningscenter</li>
+            <li>Konferensrum</li>
+        </ul>
+    </section>
+
+    <section class="attractions">
+        <h2>Sevärdheter i Närheten</h2>
+        <p>Upptäck närområdet med aktiviteter och utflyktsmål:</p>
+        <ul>
+            <li>City Park</li>
+            <li>Museum of Art</li>
+            <li>Shoppinggalleria</li>
+            <li>Historiska Gamla Stan</li>
+            <li>Strandpromenad</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Kontakta oss: info@stayease.com | +123 456 7890</p>
+        <p>&copy; 2025 StayEase. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>

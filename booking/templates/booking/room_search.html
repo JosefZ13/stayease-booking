@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Sök & Filtrera Rum</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<h1>Sök & Filtrera Rum</h1>
+
+<form method="get">
+    <label for="check_in">Incheckning:</label>
+    <input type="date" name="check_in" id="check_in" value="{{ request.GET.check_in }}">
+
+    <label for="check_out">Utcheckning:</label>
+    <input type="date" name="check_out" id="check_out" value="{{ request.GET.check_out }}">
+
+    <label for="guests">Gäster:</label>
+    <input type="number" name="guests" id="guests" min="1" value="{{ request.GET.guests }}">
+
+    <label for="room_type">Rumstyp:</label>
+    <input type="text" name="room_type" id="room_type" value="{{ request.GET.room_type }}">
+
+    <label for="capacity">Minsta kapacitet:</label>
+    <input type="number" name="capacity" id="capacity" min="1" value="{{ request.GET.capacity }}">
+
+    <label for="max_price">Maxpris (kr):</label>
+    <input type="number" step="0.01" name="max_price" id="max_price" value="{{ request.GET.max_price }}">
+
+    <br><br>
+    <button type="submit">Sök rum</button>
+</form>
+
+<h2>Resultat:</h2>
+<ul>
+    {% for room in rooms %}
+        <li>
+            <strong>Rum {{ room.room_number }}</strong> – {{ room.room_type }} –
+            {{ room.capacity }} pers – {{ room.price }} kr
+            <br>
+            <a href="{% url 'booking_form' room.id %}">
+                <button>Boka detta rum</button>
+            </a>
+        </li>
+    {% empty %}
+        <li>❌ Inga rum matchar dina sökkriterier.</li>
+    {% endfor %}
+</ul>
+
+<br>
+<a href="{% url 'home' %}">← Tillbaka till startsidan</a>
+</body>
+</html>

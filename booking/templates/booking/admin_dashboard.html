@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            margin: 2rem auto;
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table thead {
+            background-color: #004080;
+            color: white;
+        }
+
+        table th, table td {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin-top: 1.5rem;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Admin Dashboard</h1>
+
+<h2>Totala intäkter: {{ income|default:"0" }} kr</h2>
+
+<h3>Bokningar:</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Kund</th>
+            <th>Rum</th>
+            <th>Incheckning</th>
+            <th>Utcheckning</th>
+            <th>Totalpris</th>
+            <th>Åtgärder</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.customer.name }}</td>
+                <td>{{ booking.room.room_number }} - {{ booking.room.room_type }}</td>
+                <td>{{ booking.check_in_date }}</td>
+                <td>{{ booking.check_out_date }}</td>
+                <td>{{ booking.total_price }} kr</td>
+                <td>
+                    <a href="{% url 'edit_booking' booking.id %}">Redigera</a> |
+                    <a href="{% url 'delete_booking' booking.id %}" onclick="return confirm('Är du säker på att du vill ta bort denna bokning?');">Ta bort</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="6">Inga bokningar ännu.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<a href="{% url 'home' %}">← Tillbaka till startsidan</a>
+</body>
+</html>

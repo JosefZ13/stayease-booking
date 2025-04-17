@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Boka Rum – StayEase</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <script src="https://kit.fontawesome.com/f60f71d537.js" crossorigin="anonymous"></script>
+    <style>
+        .booking-form-section, .booking-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .booking-form-section form, .booking-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .room-types-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .room-type {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 1rem;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .booking-info-section, .contact-info-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .room-type a button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .room-type a button:hover {
+            background-color: #002f60;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">StayEase</div>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i> <a href="{% url 'home' %}">Home</a></li>
+            <li><i class="fa-solid fa-building-circle-check"></i> <a href="{% url 'booking' %}">Booking</a></li>
+            <li><i class="fa-solid fa-images"></i> <a href="{% url 'gallery' %}">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container booking-form-section">
+    <h1>Boka ett Rum</h1>
+    <form method="get" action="{% url 'room_search' %}">
+        <label for="guests">Antal gäster:</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+
+        <label for="check_in_date">Incheckningsdatum:</label>
+        <input type="date" id="check_in_date" name="check_in" required>
+
+        <label for="check_out_date">Utcheckningsdatum:</label>
+        <input type="date" id="check_out_date" name="check_out" required>
+
+        <button type="submit">Sök rum</button>
+    </form>
+</section>
+
+<section class="container room-types-section">
+    <h2>Våra Rum</h2>
+
+    {% for room in rooms %}
+    <div class="room-type">
+        <h3><i class="fa-solid fa-star" style="color: #efde9f;"></i> {{ room.room_type }}</h3>
+        <p>Kapacitet: {{ room.capacity }} personer<br>Pris: {{ room.price }} kr/natt</p>
+
+        <a href="{% url 'booking_form' room.id %}?check_in={{ request.GET.check_in }}&check_out={{ request.GET.check_out }}&guests={{ request.GET.guests }}">
+            <button type="button">Boka</button>
+        </a>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="container booking-info-section">
+    <h2>Information om Bokning</h2>
+    <p>Vi erbjuder rum för alla behov – från standard till lyxsviter. Välj rumstyp, fyll i detaljer och boka direkt.</p>
+</section>
+
+<section class="container contact-info-section">
+    <h2>Kontakta Oss</h2>
+    <p>Behöver du hjälp? Hör av dig:</p>
+    <p>E-post: info@stayease.com</p>
+    <p>Telefon: +123 456 7890</p>
+</section>
+
+<footer>
+    <p>Kontakt: info@stayease.com | +123 456 7890</p>
+    <p>&copy; 2025 StayEase. Alla rättigheter förbehållna.</p>
+</footer>
+</body>
+</html>

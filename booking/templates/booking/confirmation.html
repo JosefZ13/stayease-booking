@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Bokningsbekräftelse</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Tack för din bokning!</h1>
+
+    <p><strong>Namn:</strong> {{ booking.customer.name }}</p>
+    <p><strong>E-post:</strong> {{ booking.customer.email }}</p>
+
+    <p><strong>Rum:</strong> {{ booking.room.room_number }} ({{ booking.room.room_type }})</p>
+    <p><strong>Kapacitet:</strong> {{ booking.room.capacity }} personer</p>
+    <p><strong>Incheckning:</strong> {{ booking.check_in_date }}</p>
+    <p><strong>Utcheckning:</strong> {{ booking.check_out_date }}</p>
+    <p><strong>Totalt pris:</strong> {{ booking.total_price }} kr</p>
+
+    <br>
+    <a href="{% url 'home' %}">← Tillbaka till startsidan</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Boka Rum {{ room.room_number }}</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #004080;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+            text-align: left;
+        }
+
+        input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 0.8rem;
+            background-color: #004080;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #002f5f;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Boka Rum {{ room.room_number }} ({{ room.room_type }})</h1>
+    <form method="post" action="{% url 'submit_booking' %}">
+        {% csrf_token %}
+        <input type="hidden" name="room_id" value="{{ room.id }}">
+
+        <label for="name">Ditt namn:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">E-postadress:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="check_in_date">Incheckningsdatum:</label>
+        <input type="date" name="check_in_date" id="check_in_date" required>
+
+        <label for="check_out_date">Utcheckningsdatum:</label>
+        <input type="date" name="check_out_date" id="check_out_date" required>
+
+        <button type="submit">Bekräfta Bokning</button>
+    </form>
+    <a href="{% url 'room_search' %}">← Tillbaka till rumssökning</a>
+</div>
+</body>
+</html>
