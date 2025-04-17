@@ -24,3 +24,21 @@ StayEase är ett webbaserat hotellbokningssystem utvecklat med Django och HTML/C
 - Git & GitHub
 
 ---
+## 📂 Projektstruktur
+stayease-booking/
+├── booking/
+│   ├── admin.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── templates/
+│       └── booking/
+│           ├── booking.html
+│           ├── booking_form.html
+│           ├── confirmation.html
+│           └── home.html
+├── static/
+│   └── css/
+│       └── style1.css
+├── manage.py
+└── db.sqlite3
